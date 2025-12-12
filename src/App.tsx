@@ -3,12 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Leads from "./pages/Leads";
-import AulasExperimentais from "./pages/AulasExperimentais";
-import Orcamentos from "./pages/Orcamentos";
-import GradeAulas from "./pages/GradeAulas";
-import Depoimentos from "./pages/Depoimentos";
+import Home from "./pages/Home";
+import Modalidades from "./pages/Modalidades";
+import Planos from "./pages/Planos";
+import Horarios from "./pages/Horarios";
+import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,12 +19,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/leads" element={<Leads />} />
-          <Route path="/aulas-experimentais" element={<AulasExperimentais />} />
-          <Route path="/orcamentos" element={<Orcamentos />} />
-          <Route path="/grade-aulas" element={<GradeAulas />} />
-          <Route path="/depoimentos" element={<Depoimentos />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/modalidades" element={<Modalidades />} />
+          <Route path="/planos" element={<Planos />} />
+          <Route path="/horarios" element={<Horarios />} />
+          <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
